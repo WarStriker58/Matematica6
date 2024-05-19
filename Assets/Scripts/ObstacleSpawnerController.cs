@@ -10,10 +10,12 @@ public class ObstacleSpawnerController : MonoBehaviour
     [SerializeField] private PlayerController player;
     [SerializeField] private int quantityObstacles;
     [SerializeField] private int delayTimeGenerate;
+
     void Start()
     {
         Invoke("GenerarObstaculos", delayTimeGenerate);
     }
+
     private void GenerarObstaculos()
     {
         int[] indexes = new int[spawnPoints.Length];
